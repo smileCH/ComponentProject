@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api rootProject.ext.dependencies.appcompat_v7
+    api rootProject.ext.dependencies.design
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.retrofit_converter_gson
+    api rootProject.ext.dependencies.retrofit_adapter_rxjava2
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.rxandroid
+    api rootProject.ext.dependencies.rxjava
+    api rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.constraint_layout
+    api rootProject.ext.dependencies.eventbus
+    api rootProject.ext.dependencies.okhttp3_logging
+    api rootProject.ext.dependencies.SmartRefreshLayout
+    api rootProject.ext.dependencies.banner
+    api rootProject.ext.dependencies.arouter_api
+}

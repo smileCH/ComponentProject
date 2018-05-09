@@ -1,0 +1,1 @@
+include ':app', ':article_module', ':common_module', ':picture_module', ':detail_module', ':main_module'
