@@ -12,7 +12,7 @@
         android:background="#d10773"
         android:textSize="16sp"
         android:textColor="#ffffff"
-        android:text="标题"
+        android:text="详情页"
         android:gravity="center"/>
 
     <com.smile.ch.common.utils.MyWebView
